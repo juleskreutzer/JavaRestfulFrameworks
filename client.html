@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Java RESTful Framework test client</title>
+    <!-- jQuery import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function testClient() {
+        $.ajax({
+          data: "",
+          type: "GET",
+          url: "https://api.nujules.nl/about",
+          success: function(data){
+            console.log(data);
+          }
+        });
+      }
+    </script>
+    <h1>Java RESTful Framework test client</h1>
+    <hr>
+    <p>There are several frameworks what you can test using this client.<br>Click a button under the frameworks name to test a function.</p>
+    <b>Result of API call will be displayed in the console.</b>
+    <br>
+    <button onclick="testClient()" name="Test Client">Test Client</button>
+  </body>
+
+</html>
