@@ -1,0 +1,5 @@
+template: Hello, %s
+defaultName: Stranger
+
+# For a complete example of what this configuration file can do, see:
+# https://github.com/dropwizard/dropwizard/blob/master/dropwizard-example/example.yml
