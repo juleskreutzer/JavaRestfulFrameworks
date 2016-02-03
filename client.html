@@ -9,27 +9,110 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
   </head>
   <body>
-    <script>
-      function testClient() {
-        $.ajax({
-          data: "",
-          type: "GET",
-          url: "http://127.0.0.1:8080/play-framework",
-          success: function(data){
-            console.log(data);
-          }
-        });
-      }
-    </script>
-    <h1>Java RESTful Framework test client</h1>
-    <hr>
-    <p>There are several frameworks what you can test using this client.<br>Click a button under the frameworks name to test a function.</p>
-    <b>Result of API call will be displayed in the console.</b>
-    <br>
-    <h3>Dropwizard</h3>
-    <a href="http://dropwizard.io" target="_blank">dropwizard.io</a>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Java RESTful Frameworks</a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <br><br><br><br>
+              <div>
 
-    <button class="btn btn-primary" onclick="testClient()" name="Test Client">Test Client</button>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+              <li role="presentation"><a href="#dropwizard" aria-controls="dropwizard" role="tab" data-toggle="tab">Dropwizard</a></li>
+              <li role="presentation"><a href="#playframework" aria-controls="playframework" role="tab" data-toggle="tab">Play Framework</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="info">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h3>Info</h3>
+                    <p>Selecteer een van de volgende frameworks hierboven om verschillende API calls te kunnen uitvoeren.<br>
+                      Het resultaat van de API call wordt getoond in de console van uw browser.</p>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dropwizard">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h3>API call uitvoeren</h3>
+                    <pre><code>GET</code> /dropwizard-hello-world <button onclick="dropwizard_hello_world()" class="btn btn-info">Uitvoeren</button></pre>
+                    <pre><code>GET</code> /dropwizard-post-get <button onclick="dropwizard_post_get()" class="btn btn-info">Uitvoeren</button></pre>
+                    <pre><code>POST</code> /dropwizard-post-get?name=<input type="text" id="dropwizard_name_text" class="form-control" placeholder="name"> <button onclick="dropwizard_post()" class="btn btn-info">Uitvoeren</button></pre>
+                  </div>
+                  <div class="col-lg-6">
+                    <h3>Beschikbare endpoints</h3>
+                    <ul>
+                      <li><code>GET</code> /dropwizard-hello-world</li>
+                      <li><code>GET</code> /dropwizard-post-get</li>
+                      <li><code>POST</code> /dropwizard-post-get?name={name}</li>
+                    </ul>
+                    <br><a href="http://dropwizard.io" class="btn btn-primary" target="_blank">dropwizard.io</a>
+
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="playframework">...</div>
+            </div>
+
+          </div>
+            </div>
+        </div>
+    </div>
   </body>
+
+  <script>
+    /* START DROPWIZARD FUNCTIONS */
+    function dropwizard_hello_world(){
+      $.ajax({
+        data: "",
+        type: "GET",
+        url: "http://127.0.0.1:8080/dropwizard-hello-world",
+        success: function(data){
+          console.log(data);
+        }
+      });
+    }
+
+    function dropwizard_post_get(){
+      $.ajax({
+        data: "",
+        type: "GET",
+        url: "http://127.0.0.1:8080/dropwizard-post-get",
+        success: function(data){
+          console.log(data);
+        }
+      });
+    }
+
+    function dropwizard_post(){
+      var name = $("#dropwizard_name_text").val()
+      $.ajax({
+        data:"",
+        type: "POST",
+        url: "http://127.0.0.1:8080/dropwizard-post-get?name=" + name,
+        success: function(data){
+          console.log(data);
+        }
+      });
+    }
+
+    /* START PLAY-FRAMEWORK FUNCTIONS */
+  </script>
 
 </html>
