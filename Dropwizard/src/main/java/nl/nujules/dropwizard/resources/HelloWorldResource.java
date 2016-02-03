@@ -54,7 +54,7 @@ public class HelloWorldResource {
     public Saying sayHello(@QueryParam("name") Optional<String> name)
     {
         // if this endpoint is called by /dropwizard-hello-world?name= than the result will be Hello, 
-        final String value = String.format("Hello test!!@$, %s", name.or(defaultName));
+        final String value = String.format(template, name.or(defaultName));
         return new Saying(counter.incrementAndGet(), value);
     }
 }

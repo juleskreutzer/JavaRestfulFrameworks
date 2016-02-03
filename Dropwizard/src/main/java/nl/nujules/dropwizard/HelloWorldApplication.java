@@ -16,36 +16,30 @@ import nl.nujules.dropwizard.api.Saying;
 import nl.nujules.dropwizard.resources.HelloWorldResource;
 import nl.nujules.dropwizard.resources.PostGetExample;
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.util.Jetty;
 
 /**
  *
  * @author juleskreutzer
  */
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
-
-    private static Server s;
-    public static void main(String[] args) throws Exception {
-        // Configure the application
-        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable(){ 
-            @Override
-            public void run() {
-                try {
-                    shutDown();
-                } catch (Exception ex) {
-                    Logger.getLogger(HelloWorldApplication.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            
-        }));
-        new HelloWorldApplication().run(args);
-    }
     
-    private static void shutDown() throws Exception
-    {
-        if(s != null)
-        {
-            s.stop();
-        }
+    /**
+     * IMPORTANT: When this program is first executed, a Jetty Server will be started. 
+     * This server will not be shut down then this program is closed resulting in a bindException when running
+     * this program again.
+     * 
+     * To stop the Jetty server using the command line:
+     * 1. run the command "jps"
+     * 2. Remember the number before "HelloWorldApplication". This is your PID
+     * 3. run the command "kill -9 {PID}" (replace PID)
+     * 
+     * You can now run this application again without any error.
+     * 
+     */
+
+    public static void main(String[] args) throws Exception {
+        new HelloWorldApplication().run(args);
     }
     
     @Override
@@ -62,12 +56,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
     
     @Override
     public void run(HelloWorldConfiguration configuration, Environment environment) throws Exception {
-        environment.lifecycle().addServerLifecycleListener(new ServerLifecycleListener() {
-            @Override
-            public void serverStarted(Server server) {
-                s = server;
-            }
-        });
+        
         final HelloWorldResource resource = new HelloWorldResource(configuration.getTemplate(), configuration.getDefaultName());
         final PostGetExample pge = new PostGetExample();
         

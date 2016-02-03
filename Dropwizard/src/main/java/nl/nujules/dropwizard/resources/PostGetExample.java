@@ -9,7 +9,6 @@ import com.codahale.metrics.annotation.Timed;
 import com.google.common.base.Optional;
 import io.dropwizard.jersey.params.NonEmptyStringParam;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 import javax.ws.rs.GET;
 import static javax.ws.rs.HttpMethod.POST;
@@ -28,33 +27,27 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class PostGetExample {
     
-    private List<String> users;
+    private ArrayList<String> users;
+    private final String defaultName;
     
     public PostGetExample()
     {
         this.users = new ArrayList<>();
+        this.defaultName = "No name provided.";
     }
     
     @POST
-    @Timed
-    public String addUser(@QueryParam("user") String name)
+    public String addUser(@QueryParam("name") Optional<String> name)
     {
-        if(!name.equals(""))
-        {
-            users.add(name);
-        }
-        else
-        {
-            users.add("User without a name");
-        }
+        this.users.add(name.or(defaultName));
         
         return "User added";
     }
     
     @GET
     @Timed
-    public List<String> getAllUsers()
+    public Object[] getAllUsers()
     {
-        return users;
+        return users.toArray();
     }
 }
