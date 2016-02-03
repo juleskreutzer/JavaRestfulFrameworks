@@ -67,10 +67,21 @@
                   </div>
                 </div>
               </div>
-              <div role="tabpanel" class="tab-pane fade" id="playframework">...</div>
-            </div>
-
-          </div>
+              <div role="tabpanel" class="tab-pane fade" id="playframework">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h3>API call uitvoeren</h3>
+                    <pre><code>GET</code> /play-framework <button onclick="play_framework()" class="btn btn-info">Uitvoeren</button></pre>
+                  </div>
+                  <div class="col-lg-6">
+                    <h3>Beschikbare endpoints</h3>
+                    <ul>
+                      <li><code>GET</code> /play-framework</li>
+                    </ul>
+                    <br><a href="https://playframework.com" target="_blank" class="btn btn-primary">playframework.com</a>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
@@ -101,9 +112,9 @@
     }
 
     function dropwizard_post(){
-      var name = $("#dropwizard_name_text").val()
+      var name = $("#dropwizard_name_text").val();
       $.ajax({
-        data:"",
+        data: "",
         type: "POST",
         url: "http://127.0.0.1:8080/dropwizard-post-get?name=" + name,
         success: function(data){
@@ -113,6 +124,18 @@
     }
 
     /* START PLAY-FRAMEWORK FUNCTIONS */
+
+    function play_framework()
+    {
+      $.ajax({
+        data: "",
+        type: "GET",
+        url: "http://127.0.0.1:8080/play-framework",
+        success: function(data){
+          console.log(data);
+        }
+      });
+    }
   </script>
 
 </html>
