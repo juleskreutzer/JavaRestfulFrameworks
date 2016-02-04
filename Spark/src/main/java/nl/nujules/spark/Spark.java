@@ -40,6 +40,7 @@ public class Spark {
          */
         get("/spark/hello/:name", (request, response) -> {
             response.type("application/json"); // Return JSON 
+            response.header("Access-Control-Allow-Origin", "*");
             return "Hello, " + request.params(":name");
         }, new transformer());
         
@@ -49,6 +50,7 @@ public class Spark {
         //Return all users of the list
         get("/spark/post-get/", (request, response) -> {
             response.type("application/json");
+            response.header("Access-Control-Allow-Origin", "*");
             return users;
         }, new transformer());
         
@@ -56,6 +58,7 @@ public class Spark {
         // Do you see the difference where we put the content type "application/json"?
         post("/spark/post-get/:name", "application/json", (request, response) -> {
             users.add(request.params(":name"));
+            response.header("Access-Control-Allow-Origin", "*");
             return "User added!";
         }, new transformer());
         
