@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/fortunes.iml" filepath="$PROJECT_DIR$/fortunes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fortunes-api/fortunes-api.iml" filepath="$PROJECT_DIR$/fortunes-api/fortunes-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fortunes-server/restli.iml" filepath="$PROJECT_DIR$/fortunes-server/restli.iml" />
+    </modules>
+  </component>
+</project>
