@@ -10,12 +10,16 @@ import io.dropwizard.lifecycle.ServerLifecycleListener;
 import io.dropwizard.server.ServerFactory;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import java.util.EnumSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.DispatcherType;
+import javax.servlet.FilterRegistration;
 import nl.nujules.dropwizard.api.Saying;
 import nl.nujules.dropwizard.resources.HelloWorldResource;
 import nl.nujules.dropwizard.resources.PostGetExample;
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlets.CrossOriginFilter;
 import org.eclipse.jetty.util.Jetty;
 
 /**
@@ -62,6 +66,17 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         
         environment.jersey().register(resource);
         environment.jersey().register(pge);
+        
+        // Add a filter for Access-Control-Allow-Origin
+        
+        final FilterRegistration.Dynamic cors =
+        environment.servlets().addFilter("CORS", CrossOriginFilter.class);
+
+        // Configure CORS parameters
+        cors.setInitParameter("Access-Control-Allow-Origin", "*");
+
+        // Add URL mapping
+        cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
+        
     }
-    
 }
