@@ -1,5 +1,13 @@
 template: Hello, %s
 defaultName: Stranger
 
+server:
+  applicationConnectors:
+  - type: http 
+    port: 9000
+  adminConnectors:
+  - type: http
+    port: 9001
+
 # For a complete example of what this configuration file can do, see:
 # https://github.com/dropwizard/dropwizard/blob/master/dropwizard-example/example.yml
