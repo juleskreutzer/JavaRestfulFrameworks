@@ -119,7 +119,7 @@
       $.ajax({
         data: "",
         type: "GET",
-        url: "http://127.0.0.1:9000/dropwizard-hello-world",
+        url: "http://127.0.0.1:8080/dropwizard-hello-world",
         success: function(data){
           console.log(data);
         }
@@ -130,7 +130,7 @@
       $.ajax({
         data: "",
         type: "GET",
-        url: "http://127.0.0.1:9000/dropwizard-post-get",
+        url: "http://127.0.0.1:8080/dropwizard-post-get",
         success: function(data){
           console.log(data);
         }
@@ -142,7 +142,7 @@
       $.ajax({
         data: "",
         type: "POST",
-        url: "http://127.0.0.1:9000/dropwizard-post-get?name=" + name,
+        url: "http://127.0.0.1:8080/dropwizard-post-get?name=" + name,
         success: function(data){
           console.log(data);
         }
@@ -155,7 +155,7 @@
       $.ajax({
         data: "",
         type: "GET",
-        url: "http://127.0.0.1:9000/play-hello-world",
+        url: "http://127.0.0.1:8080/play-hello-world",
         success: function(data){
           console.log(data);
         }
@@ -166,7 +166,7 @@
       $.ajax({
         data: "",
         type: "GET",
-        url: "http://127.0.0.1:9000/play-post-get",
+        url: "http://127.0.0.1:8080/play-post-get",
         success: function(data){
           console.log(data);
         }
@@ -178,7 +178,7 @@
       $.ajax({
         data: "",
         type: "POST",
-        url: "http://127.0.0.1:9000/play-post-get/" + name,
+        url: "http://127.0.0.1:8080/play-post-get/" + name,
         success: function(data){
           console.log(data);
         }
@@ -193,7 +193,7 @@
       $.ajax({
         data: "",
         type: "GET",
-        url: "http://127.0.0.1:9000/spark/hello/jules",
+        url: "http://127.0.0.1:8080/spark/hello/"+name,
         success: function(data){
           console.log(data);
         }
@@ -205,7 +205,7 @@
       $.ajax({
         data: "",
         type: "GET",
-        url: "http://127.0.0.1:9000/spark/post-get/",
+        url: "http://127.0.0.1:8080/spark/post-get/",
         success: function(data){
           console.log(data);
         }
@@ -218,7 +218,7 @@
       $.ajax({
         data: "",
         type: "POST",
-        url: "http://127.0.0.1:9000/spark/post-get/" + name,
+        url: "http://127.0.0.1:8080/spark/post-get/" + name,
         success: function(data){
           console.log(data);
         }
@@ -230,7 +230,7 @@
       $.ajax({
         data: "",
         type: "POST",
-        url: "http://127.0.0.1:9000/spark/stop",
+        url: "http://127.0.0.1:8080/spark/stop",
         succes: function() {
           console.log("Spark service stopped!");
         }
