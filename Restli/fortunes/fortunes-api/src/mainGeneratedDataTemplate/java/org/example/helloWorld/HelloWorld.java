@@ -1,5 +1,5 @@
 
-package org.example.fortunes;
+package org.example.helloWorld;
 
 import java.util.List;
 import javax.annotation.Generated;
@@ -16,24 +16,24 @@ import com.linkedin.data.template.SetMode;
  * Fortune data schema
  * 
  */
-@Generated(value = "com.linkedin.pegasus.generator.PegasusDataTemplateGenerator", comments = "LinkedIn Data Template. Generated from /Users/juleskreutzer/Documents/github/JavaRestfullFrameworks/Restli/fortunes/fortunes-api/src/main/pegasus/org/example/fortunes/Fortune.pdsc.", date = "Thu Feb 04 22:12:03 CET 2016")
-public class Fortune
+@Generated(value = "com.linkedin.pegasus.generator.PegasusDataTemplateGenerator", comments = "LinkedIn Data Template. Generated from /Users/juleskreutzer/Documents/github/JavaRestfullFrameworks/Restli/fortunes/fortunes-api/src/main/pegasus/org/example/helloWorld/HelloWorld.pdsc.", date = "Fri Feb 05 11:01:34 CET 2016")
+public class HelloWorld
     extends RecordTemplate
 {
 
-    private final static Fortune.Fields _fields = new Fortune.Fields();
-    private final static RecordDataSchema SCHEMA = ((RecordDataSchema) DataTemplateUtil.parseSchema("{\"type\":\"record\",\"name\":\"Fortune\",\"namespace\":\"org.example.fortunes\",\"doc\":\"Fortune data schema\",\"fields\":[{\"name\":\"message\",\"type\":\"string\",\"doc\":\"An example 'message' field of type string\"}]}"));
+    private final static HelloWorld.Fields _fields = new HelloWorld.Fields();
+    private final static RecordDataSchema SCHEMA = ((RecordDataSchema) DataTemplateUtil.parseSchema("{\"type\":\"record\",\"name\":\"HelloWorld\",\"namespace\":\"org.example.helloWorld\",\"doc\":\"Fortune data schema\",\"fields\":[{\"name\":\"message\",\"type\":\"string\",\"doc\":\"An example 'message' field of type string\"}]}"));
     private final static RecordDataSchema.Field FIELD_Message = SCHEMA.getField("message");
 
-    public Fortune() {
+    public HelloWorld() {
         super(new DataMap(), SCHEMA);
     }
 
-    public Fortune(DataMap data) {
+    public HelloWorld(DataMap data) {
         super(data, SCHEMA);
     }
 
-    public static Fortune.Fields fields() {
+    public static HelloWorld.Fields fields() {
         return _fields;
     }
 
@@ -78,7 +78,7 @@ public class Fortune
      * 
      * @see Fields#message
      */
-    public Fortune setMessage(String value, SetMode mode) {
+    public HelloWorld setMessage(String value, SetMode mode) {
         putDirect(FIELD_Message, String.class, String.class, value, mode);
         return this;
     }
@@ -88,23 +88,23 @@ public class Fortune
      * 
      * @see Fields#message
      */
-    public Fortune setMessage(String value) {
+    public HelloWorld setMessage(String value) {
         putDirect(FIELD_Message, String.class, String.class, value, SetMode.DISALLOW_NULL);
         return this;
     }
 
     @Override
-    public Fortune clone()
+    public HelloWorld clone()
         throws CloneNotSupportedException
     {
-        return ((Fortune) super.clone());
+        return ((HelloWorld) super.clone());
     }
 
     @Override
-    public Fortune copy()
+    public HelloWorld copy()
         throws CloneNotSupportedException
     {
-        return ((Fortune) super.copy());
+        return ((HelloWorld) super.copy());
     }
 
     public static class Fields

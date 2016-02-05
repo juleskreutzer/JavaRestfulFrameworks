@@ -1,7 +1,7 @@
 {
   "type": "record",
-  "name": "Fortune",
-  "namespace": "org.example.fortunes",
+  "name": "HelloWorld",
+  "namespace": "org.example.helloWorld",
   "doc": "Fortune data schema",
   "fields": [
     {
