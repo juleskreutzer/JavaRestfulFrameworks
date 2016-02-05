@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "PostGetExample",
+  "namespace": "org.example.postGetExample",
+  "doc": "PostGetExample to store data in a list and retrieve it",
+  "fields": [
+    {
+      "name": "name",
+      "type": { "type" : "map", "values" : "string" },
+      "doc": "An example 'message' field of type string"
+    }
+  ]
+}

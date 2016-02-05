@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.linkedin.pegasus:li-jersey-uri:1.15.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/li-jersey-uri/1.15.4/6db0d3f7761e5ffa2ba226f347807edb0449c30c/li-jersey-uri-1.15.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/li-jersey-uri/1.15.4/e2fb758a92491fd5b82ba37ded60dedeed73139c/li-jersey-uri-1.15.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

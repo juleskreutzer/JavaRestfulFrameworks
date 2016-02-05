@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.linkedin.pegasus:r2:1.15.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/r2/1.15.4/2d8ec4fc12e8401c4b5e6a2c7319b9d5d32caada/r2-1.15.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/r2/1.15.4/26d1358cf12cb2f4ef45731a7dc8f904ae7a8c46/r2-1.15.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

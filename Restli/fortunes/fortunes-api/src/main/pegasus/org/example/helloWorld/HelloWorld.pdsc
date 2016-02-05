@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "HelloWorld",
+  "namespace": "org.example.helloWorld",
+  "doc": "Fortune data schema",
+  "fields": [
+    {
+      "name": "message",
+      "type": "string",
+      "doc": "An example 'message' field of type string"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : fortunes:fortunes-server : fortunes-server.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/fortunes-server/exploded/fortunes-server.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="fortunes-server/web/Web Gradle : fortunes-server.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="restli" />
+          <element id="dir-copy" path="$PROJECT_DIR$/fortunes-server/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="fortunes-fortunes-api-unspecified.jar">
+            <element id="module-output" name="fortunes-api" />
+            <element id="dir-copy" path="$PROJECT_DIR$/fortunes-api/build/resources/main" />
+          </element>
+          <element id="library" level="module" name="Gradle: fortunes-api-data-template" module-name="fortunes-api" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/restli-server/1.15.4/dc7db8eb949691a2192c37b243950ba34ea18612/restli-server-1.15.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/data/1.15.4/69dae5d1af4537b043b1f26dfb8a8baeb5598d8d/data-1.15.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.parseq/parseq/1.3.6/9db2cbe29010e4bf67f06daa8d5c559da4ca2c01/parseq-1.3.6.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/r2/1.15.4/2d8ec4fc12e8401c4b5e6a2c7319b9d5d32caada/r2-1.15.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/restli-common/1.15.4/d64f91e11aa1061466d606327eeb93b7eee28e9c/restli-common-1.15.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/6bf0ebb7efd993e222fc1112377b5e92a13b38dd/javax.servlet-api-3.0.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.6.2/8619e95939167fb37245b5670135e4feb0ec7d50/slf4j-api-1.6.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/pegasus-common/1.15.4/130edd432fffce1455373634cf5540a8a0feba5f/pegasus-common-1.15.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/li-jersey-uri/1.15.4/6db0d3f7761e5ffa2ba226f347807edb0449c30c/li-jersey-uri-1.15.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.mail/mail/1.4.1/8b7bc69010655425dabf091b51d1e90b4de36715/mail-1.4.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.4/16313e02a793435009f1e458fa4af5d879f6fb11/commons-lang-2.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/data-transform/1.15.4/c2515061e7941d58d0b61e52bc78083080a091ed/data-transform-1.15.4.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/commons-io/commons-io/1.4/commons-io-1.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.json/json/20070829/89190ff77b57203c3417555f32226998da97ff38/json-20070829.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.4.2/bd7a893c5c575d20a36b98dc65f5a80c5609cc97/jackson-core-asl-1.4.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.4.2/5f3ba53c3998b6dece15d4b83d189de23a8d8ad8/jackson-mapper-asl-1.4.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.netty/netty/3.2.3.Final/be6a9436b5671a610f7da24c4457f9df8849191e/netty-3.2.3.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.2/45b5ec6a16d73d98fe370cfc2e8253bddc6a297e/commons-compress-1.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.mina/mina-core/1.1.7/443839ae3daa2dde91825c050725dff737a71701/mina-core-1.1.7.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.iq80.snappy/snappy/0.3/c4ca27840da7ffc6ed46ec34454683a6c1c2b2f8/snappy-0.3.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/cglib/cglib-nodep/2.2/59afed7ab65e7ec6585d5bc60556c3cbd203532b/cglib-nodep-2.2.jar" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/classes/artifacts/fortunes-server/exploded/fortunes-server.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
